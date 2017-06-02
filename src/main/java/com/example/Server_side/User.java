@@ -8,16 +8,22 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-
+	private Integer id; 
+	
 	@Column
-	private String name;
-
+	private String name; 
+	
 	@Column
-	private String password;
+	private String position; 
+	
+	@Column
+	private String department; 
+	
+	@Column
+	private String salary;
 
 	public Integer getId() {
 		return id;
@@ -35,12 +41,30 @@ public class User {
 		this.name = name;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getPosition() {
+		return position;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPosition(String position) {
+		this.position = position;
 	}
 
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public String getSalary() {
+		return salary;
+	}
+
+	public void setSalary(String salary) {
+		this.salary = salary;
+	} 
+	
+	
+	
 }
